@@ -156,6 +156,7 @@ main {
 
 #productList li > div,
 #productList li {
+  position: relative; 
   padding: 1.3rem 1.4rem;
   font-size: 1.05rem;
   font-weight: 600;
@@ -163,10 +164,11 @@ main {
   background: linear-gradient(to bottom, transparent 60%, rgba(255,248,235,0.7) 100%);
 }
 
+
 #productList li::after {
-  content: "KSh";
-  position: absolute;
-  top: 12px;
+  content: "KSh";              
+  position: absolute;           
+  bottom: 16px;
   right: 16px;
   background: #e8b923;
   color: #3d2b1f;
@@ -174,6 +176,7 @@ main {
   padding: 0.35rem 0.9rem;
   border-radius: 999px;
   font-size: 0.92rem;
+  z-index: 1;                  
 }
 
 .products {
