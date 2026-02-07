@@ -164,21 +164,6 @@ main {
   background: linear-gradient(to bottom, transparent 60%, rgba(255,248,235,0.7) 100%);
 }
 
-
-#productList li::after {
-  content: "KSH";              
-  position: absolute;           
-  bottom: 12px;
-  right: 16px;
-  background: #e8b923;
-  color: #3d2b1f;
-  font-weight: bold;
-  padding: 0.35rem 0.9rem;
-  border-radius: 999px;
-  font-size: 0.92rem;
-  z-index: 1;                  
-}
-
 .products {
   margin: 4rem 0;
 }
