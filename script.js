@@ -1,4 +1,4 @@
-// ---------- COOKIES ----------
+
 function setCookie(name, value, days) {
   let expires = "";
   if (days) {
@@ -19,22 +19,7 @@ function getCookie(name) {
   return null;
 }
 
-// ---------- VISITOR MESSAGE ----------
-function initVisitorGreeting() {
-  const msg = document.getElementById("visitor-msg");
-  if (!msg) return;
 
-  if (getCookie("visitor")) {
-    msg.textContent = "Welcome back! Have a great time 🙂";
-    msg.style.color = "green";
-  } else {
-    setCookie("visitor", "yes", 365);
-    msg.textContent = "First time here? Enjoy authentic Kenyan crafts!";
-    msg.style.color = "red";
-  }
-}
-
-// ---------- REGISTRATION ----------
 function validateForm() {
   const msg = document.getElementById("form-msg");
   const name = document.getElementById("name").value.trim();
@@ -72,10 +57,9 @@ function validateForm() {
     window.location.href = "products.html";
   }, 1000);
 
-  return false; // stop page reload
+  return false; 
 }
 
-// ---------- COOKIE CONSENT ----------
 function acceptConsent() {
   const checkbox = document.getElementById("consent-check");
   if (!checkbox) return;
@@ -88,7 +72,6 @@ function acceptConsent() {
   }
 }
 
-// ---------- PRODUCT SEARCH ----------
 function searchProducts() {
   const query = document.getElementById("search")?.value.toLowerCase() || "";
   const list = document.getElementById("productList");
@@ -100,12 +83,6 @@ function searchProducts() {
   }
 }
 
-// ---------- PRODUCTS ----------
-const products = [
-  { name: "Woven Maasai Basket", price: 1200, img: "https://images.unsplash.com/photo-1584305570908-259a448c7b11?auto=format&fit=crop&w=400&q=80" },
-  { name: "Maasai Beaded Necklace", price: 850, img: "https://images.unsplash.com/photo-1611590027211-b954fd027b51?auto=format&fit=crop&w=400&q=80" },
-  { name: "Organic Shea Butter Soap", price: 450, img: "https://sheanutorganix.us/cdn/shop/files/095E962D-7F0D-46BB-B2FB-003BF55B766B.jpg?v=1753334718&width=400" },
-];
 
 function loadFeaturedProducts() {
   const container = document.getElementById("featured-products");
@@ -123,7 +100,7 @@ function loadFeaturedProducts() {
   });
 }
 
-// ---------- INIT ----------
+
 document.addEventListener("DOMContentLoaded", () => {
   initVisitorGreeting();
   loadFeaturedProducts();
