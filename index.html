@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kenyan Crafts Market</title>
+  <meta name="description" content="A simple online marketplace for Kenyan handmade crafts">
+  <meta name="author" content="Allan Ratemo">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Kenyan Crafts Market</h1>
+  <p>Discover beautiful handmade crafts from Kenya</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="#register">Register</a>
+  </nav>
+</header>
+<main>
+  <section class="privacy">
+    <h3>Privacy Notice</h3>
+    <p>
+      Kenyan Crafts Market respects your privacy. Personal information collected
+      is processed according to the <strong>Kenya Data Protection Act (2019)</strong>
+      and used only for registration; it is not shared with third parties.
+    </p>
+  </section>
+  <section id="register">
+    <h2>User Registration</h2>
+    <form onsubmit="return validateForm()">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Full Name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Email" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Register</button>
+      <p id="form-msg"></p>
+      <div class="cookie-consent">
+        <p>
+          We only use a cookie to remember if you've visited before.<br>
+          By continuing, you agree that we may process your data per Kenya's 
+          <strong>Data Protection Act 2019</strong>.
+        </p>
+        <label><input type="checkbox" id="consent-check"> I agree to my data being processed</label>
+        <button type="button" onclick="acceptConsent()">I Agree</button>
+      </div>
+    </form>
+  </section>
+  <section>
+    <h2>Welcome</h2>
+    <p id="visitor-msg"></p>
+  </section>
+  <section class="products">
+    <h2>Featured Crafts</h2>
+    <div id="featured-products"></div>
+    <a href="products.html">Browse All Products →</a>
+  </section>
+</main>
+<footer>
+  <p>&copy; 2026 Kenyan Crafts Market</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
