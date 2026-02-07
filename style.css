@@ -166,9 +166,9 @@ main {
 
 
 #productList li::after {
-  content: "KSh";              
+  content: "KSH";              
   position: absolute;           
-  bottom: 16px;
+  bottom: 12px;
   right: 16px;
   background: #e8b923;
   color: #3d2b1f;
